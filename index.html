@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BalancAI - Personal AI Financial Ecosystem</title>
+    <meta
+      name="description"
+      content="Manage your personal finances, sync banks, and get AI-driven insights with BalancAI."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero-poster.webp"
+      type="image/webp"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="menu-toggle" class="visually-hidden" />
+
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo" aria-label="Головна BalancAI">
+          <span class="logo__icon">
+            <img
+              src="images/logo-header.webp"
+              alt="BalancAI"
+              width="44"
+              height="44"
+            />
+          </span>
+          <span class="logo__text">BalancAI</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Основна навігація">
+          <ul class="nav-desktop__list">
+            <li><a href="#features" class="nav-desktop__link">Features</a></li>
+            <li><a href="#banks" class="nav-desktop__link">Banks</a></li>
+            <li>
+              <a href="#ai-assistant" class="nav-desktop__link">AI Assistant</a>
+            </li>
+            <li><a href="#pricing" class="nav-desktop__link">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <a href="#pricing" class="btn btn--primary header__btn">Visit site</a>
+
+        <label for="menu-toggle" class="burger" aria-label="Відкрити меню">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Your Personal AI<br />Financial Ecosystem
+            </h1>
+            <p class="hero__desc">
+              Stop guessing where your money goes. Seamlessly sync with your
+              banks and get AI-powered insights to manage your budget
+              effortlessly.
+            </p>
+          </div>
+
+          <div class="hero__mockup">
+            <div class="laptop__screen">
+              <video
+                class="laptop__video"
+                src="images/video/hero-video.mp4"
+                poster="images/hero-poster.webp"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+            </div>
+            <div class="laptop__base"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="integrations" id="banks">
+        <div class="container integrations__inner">
+          <h2 class="integrations__title">Powered by &amp; Integrated with</h2>
+
+          <div class="integrations__list">
+            <div class="bank-card">
+              <img
+                src="images/privat.webp"
+                alt="PrivatBank"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="bank-card">
+              <img
+                src="images/mastercard.webp"
+                alt="Mastercard"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="bank-card bank-card--pumb">
+              <img
+                src="images/pumb.webp"
+                alt="PUMB"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="bank-card">
+              <img
+                src="images/abank.webp"
+                alt="A-Bank"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="bank-card bank-card--mono">
+              <img
+                src="images/mono.webp"
+                alt="Monobank"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="bank-card">
+              <img
+                src="images/Visa.webp"
+                alt="Visa"
+                class="bank-card__img"
+                width="84"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container features__inner">
+          <div class="section-head">
+            <h2 class="section-head__title">
+              Track, analyze, and grow your wealth
+            </h2>
+            <p class="section-head__subtitle">
+              Track spending, set smart budgets, and manage your money
+              effortlessly with AI-powered insights.
+            </p>
+          </div>
+
+          <div class="features__list">
+            <div class="feature-card">
+              <div class="feature-card__header">
+                <div class="feature-card__icon-box">
+                  <img
+                    src="images/icons/sync.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="feature-card__title">MONOBANK SYNC</h3>
+              </div>
+              <p class="feature-card__text">
+                Connect your cards in one click and keep your transaction
+                history automatically updated in real time.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-card__header">
+                <div class="feature-card__icon-box">
+                  <img
+                    src="images/icons/analytics-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="feature-card__title">SMART ANALYTICS</h3>
+              </div>
+              <p class="feature-card__text">
+                Visual graphs and category breakdowns that clearly show where
+                every single penny of your budget goes.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-card__header">
+                <div class="feature-card__icon-box">
+                  <img
+                    src="images/icons/ai-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="feature-card__title">AI ASSISTANT</h3>
+              </div>
+              <p class="feature-card__text">
+                Ask questions about your spending habits and get instant,
+                intelligent insights or savings tips.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-card__header">
+                <div class="feature-card__icon-box">
+                  <img
+                    src="images/icons/bank-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="feature-card__title">BANK-GRADE SECURITY</h3>
+              </div>
+              <p class="feature-card__text">
+                Your financial data is encrypted and protected with
+                industry-standard security protocols.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase" id="showcase">
+        <div class="container showcase__inner">
+          <div class="showcase__mockups" aria-hidden="true">
+            <div class="phone phone--back"></div>
+            <div class="phone phone--front"></div>
+          </div>
+
+          <div class="showcase__content">
+            <h2 class="showcase__title">
+              All your bank accounts in one secure app
+            </h2>
+            <p class="showcase__desc">
+              Seamlessly connect Monobank and other cards. Track balances,
+              categorize expenses automatically, and let AI optimize your
+              budget.
+            </p>
+
+            <ul class="showcase__checklist">
+              <li class="checklist-item">
+                <div class="checklist-item__icon">
+                  <img
+                    src="images/icons/sync-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span class="checklist-item__text"
+                  >Instant sync with Monobank</span
+                >
+              </li>
+              <li class="checklist-item">
+                <div class="checklist-item__icon">
+                  <img
+                    src="images/icons/power-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span class="checklist-item__text"
+                  >AI-powered spending insights</span
+                >
+              </li>
+              <li class="checklist-item">
+                <div class="checklist-item__icon">
+                  <img
+                    src="images/icons/encryption-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span class="checklist-item__text"
+                  >Bank-level data encryption</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="ai-banner" id="ai-assistant">
+        <div class="container ai-banner__inner">
+          <div class="ai-banner__content">
+            <h2 class="ai-banner__title">
+              Your personal financial advisor, available 24/7
+            </h2>
+            <p class="ai-banner__desc">
+              Ask complex questions about your budget, get instant spending
+              forecasts, and receive smart tips on how to save more every month
+              – all through a natural chat interface.
+            </p>
+            <a href="#site" class="btn btn--white">VISIT SITE</a>
+          </div>
+
+          <div class="ai-banner__preview">
+            <picture class="ai-banner__picture">
+              <source srcset="images/chat.webp" type="image/webp" />
+              <img
+                src="images/chat.webp"
+                alt="AI Chat Interface Preview"
+                class="ai-banner__image"
+                width="548"
+                height="350"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="container pricing__inner">
+          <div class="section-head">
+            <h2 class="section-head__title">Pricing</h2>
+            <p class="section-head__subtitle">
+              Choose the right plan for your finances
+            </p>
+          </div>
+
+          <div class="pricing__slider">
+            <div class="pricing-card">
+              <div class="pricing-card__header">
+                <div class="pricing-card__icon">
+                  <img
+                    src="images/icons/savings.svg"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="pricing-card__badge">FREE PLAN</h3>
+              </div>
+
+              <div class="pricing-card__body">
+                <p class="pricing-card__info">Plan Name: FREE</p>
+                <p class="pricing-card__info">Price: $0 / month</p>
+                <p class="pricing-card__info">
+                  Description: Perfect for tracking personal daily expenses and
+                  basic budgeting.
+                </p>
+
+                <p class="pricing-card__features-title">Features:</p>
+                <ul class="pricing-card__list">
+                  <li>1 Monobank connection</li>
+                  <li>Automatic categorization</li>
+                  <li>Monthly expense charts</li>
+                  <li>Standard CSV export</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pricing-card pricing-card--pro">
+              <div class="pricing-card__header">
+                <div class="pricing-card__icon">
+                  <img
+                    src="images/icons/pricing.svg"
+                    alt=""
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 class="pricing-card__badge">PRO PLAN</h3>
+              </div>
+
+              <div class="pricing-card__body">
+                <p class="pricing-card__info">Plan Name: PRO AI</p>
+                <p class="pricing-card__info">Price: $7.99 / month</p>
+                <p class="pricing-card__info">
+                  Description: Full financial control powered by artificial
+                  intelligence.
+                </p>
+
+                <p class="pricing-card__features-title">Features:</p>
+                <ul class="pricing-card__list">
+                  <li>Unlimited bank accounts &amp; cards</li>
+                  <li>Unlimited AI assistant queries</li>
+                  <li>Smart budget forecasting</li>
+                  <li>Real-time overspending alerts</li>
+                  <li>Priority 24/7 support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="container testimonials__inner">
+          <div class="testimonials__header">
+            <h2 class="testimonials__title">What our users say?</h2>
+            <a href="#site" class="btn btn--primary testimonials__btn"
+              >Visit site</a
+            >
+          </div>
+
+          <div
+            class="testimonials__slider"
+            role="region"
+            aria-label="Відгуки клієнтів"
+          >
+            <div class="testimonial-card">
+              <blockquote class="testimonial-card__quote">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                commodo dolor fermentum dignissim et pellentesque egestas
+                mauris, faucibus. Tellus nisi amet non at phasellus faucibus
+                senectus in”
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="images/avatart.webp"
+                  alt="John Carter"
+                  class="testimonial-card__avatar"
+                  width="58"
+                  height="58"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="testimonial-card__meta">
+                  <span class="testimonial-card__name">JOHN CARTER</span>
+                  <span class="testimonial-card__role">ROLE, COMPANY</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <blockquote class="testimonial-card__quote">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                commodo dolor fermentum dignissim et pellentesque egestas
+                mauris, faucibus. Tellus nisi amet non at phasellus faucibus
+                senectus in”
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="images/avatart.webp"
+                  alt="John Carter"
+                  class="testimonial-card__avatar"
+                  width="58"
+                  height="58"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="testimonial-card__meta">
+                  <span class="testimonial-card__name">JOHN CARTER</span>
+                  <span class="testimonial-card__role">ROLE, COMPANY</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <blockquote class="testimonial-card__quote">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                commodo dolor fermentum dignissim et pellentesque egestas
+                mauris, faucibus. Tellus nisi amet non at phasellus faucibus
+                senectus in”
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="images/avatart.webp"
+                  alt="John Carter"
+                  class="testimonial-card__avatar"
+                  width="58"
+                  height="58"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="testimonial-card__meta">
+                  <span class="testimonial-card__name">JOHN CARTER</span>
+                  <span class="testimonial-card__role">ROLE, COMPANY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__pagination" aria-label="Пагінація слайдера">
+            <button
+              type="button"
+              class="dot dot--active"
+              aria-label="Перейти до відгуку 1"
+            ></button>
+            <button
+              type="button"
+              class="dot"
+              aria-label="Перейти до відгуку 2"
+            ></button>
+            <button
+              type="button"
+              class="dot"
+              aria-label="Перейти до відгуку 3"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <a href="#" class="logo footer__logo" aria-label="Головна BalancAI">
+            <span class="logo__icon">
+              <img
+                src="images/logo-header.webp"
+                alt="BalancAI"
+                width="44"
+                height="44"
+                loading="lazy"
+              />
+            </span>
+            <span class="footer__logo_text logo__text">BalancAI</span>
+          </a>
+
+          <div class="footer__menu-block">
+            <h3 class="footer__menu-title">MENU</h3>
+            <div class="footer__divider"></div>
+
+            <div class="footer__cols">
+              <ul class="footer__list">
+                <li><a href="#" class="footer__link">HOME</a></li>
+                <li><a href="#features" class="footer__link">FEATURES</a></li>
+                <li><a href="#pricing" class="footer__link">PRICING</a></li>
+              </ul>
+              <ul class="footer__list">
+                <li><a href="#banks" class="footer__link">BANKS</a></li>
+                <li>
+                  <a href="#ai-assistant" class="footer__link">AI ASSISTANT</a>
+                </li>
+                <li><a href="#contact" class="footer__link">CONTACT US</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__right">
+          <form class="feedback-form" action="#" method="POST">
+            <h3 class="feedback-form__title">LEAVE A FEEDBACK</h3>
+
+            <div class="form-group">
+              <label for="feedback-email" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="feedback-email"
+                name="email"
+                class="form-input"
+                placeholder="Email address"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-message" class="visually-hidden"
+                >Your message</label
+              >
+              <textarea
+                id="feedback-message"
+                name="message"
+                class="form-textarea"
+                placeholder="Your message..."
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <div class="socials">
+          <a
+            href="#"
+            class="social-icon"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/icons/insta.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="#"
+            class="social-icon"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/icons/facebook.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="#"
+            class="social-icon"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/icons/linked in.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-menu" id="mobile-menu-overlay">
+      <div class="container mobile-menu__inner">
+        <div class="mobile-menu__header">
+          <div class="logo">
+            <span class="logo__icon">
+              <img
+                src="images/logo-header.webp"
+                alt="BalancAI"
+                width="58"
+                height="58"
+              />
+            </span>
+            <span class="logo__text logo__text--visible">BalancAI</span>
+          </div>
+
+          <label
+            for="menu-toggle"
+            class="mobile-menu__close"
+            aria-label="Закрити меню"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </label>
+        </div>
+
+        <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+          <ul class="mobile-menu__list">
+            <li><a href="#features" class="mobile-menu__link">Features</a></li>
+            <li><a href="#pricing" class="mobile-menu__link">Pricing</a></li>
+            <li>
+              <a href="#ai-assistant" class="mobile-menu__link">AI Assistant</a>
+            </li>
+            <li><a href="#banks" class="mobile-menu__link">Banks</a></li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu__footer">
+          <a href="#pricing" class="btn btn--primary">Visit site</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileLinks = document.querySelectorAll(
+          ".mobile-menu__link, .mobile-menu__footer .btn",
+        );
+
+        if (menuToggle && mobileLinks.length > 0) {
+          mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              menuToggle.checked = false;
+            });
+          });
+        }
+
+        const slider = document.querySelector(".testimonials__slider");
+        if (!slider) {
+          console.warn("Слайдер .testimonials__slider не знайдено в DOM.");
+          return;
+        }
+
+        const cards = Array.from(slider.querySelectorAll(".testimonial-card"));
+        const dots = Array.from(
+          document.querySelectorAll(".testimonials__pagination .dot"),
+        );
+
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+        let hasMoved = false;
+
+        slider.addEventListener("dragstart", (e) => e.preventDefault());
+
+        slider.addEventListener("mousedown", (e) => {
+          if (e.button !== 0) return;
+
+          isDown = true;
+          hasMoved = false;
+          slider.classList.add("is-dragging");
+          slider.style.scrollSnapType = "none";
+          slider.style.scrollBehavior = "auto";
+
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+
+        const endDrag = () => {
+          if (!isDown) return;
+          isDown = false;
+          slider.classList.remove("is-dragging");
+          slider.style.scrollSnapType = "x mandatory";
+          slider.style.scrollBehavior = "smooth";
+        };
+
+        window.addEventListener("mouseup", endDrag);
+
+        slider.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+
+          const currentX = e.pageX - slider.offsetLeft;
+          const distance = (currentX - startX) * 1.5;
+
+          if (Math.abs(distance) > 5) {
+            hasMoved = true;
+          }
+
+          slider.scrollLeft = scrollLeft - distance;
+        });
+
+        slider.addEventListener(
+          "click",
+          (e) => {
+            if (hasMoved) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          },
+          true,
+        );
+
+        let isScrolling = false;
+
+        const updateActiveDot = () => {
+          const sliderCenter = slider.scrollLeft + slider.clientWidth / 2;
+          let closestIndex = 0;
+          let minDiff = Infinity;
+
+          cards.forEach((card, index) => {
+            const cardCenter =
+              card.offsetLeft + card.clientWidth / 2 - slider.offsetLeft;
+            const diff = Math.abs(sliderCenter - cardCenter);
+
+            if (diff < minDiff) {
+              minDiff = diff;
+              closestIndex = index;
+            }
+          });
+
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle("dot--active", idx === closestIndex);
+          });
+
+          isScrolling = false;
+        };
+
+        slider.addEventListener(
+          "scroll",
+          () => {
+            if (!isScrolling) {
+              window.requestAnimationFrame(updateActiveDot);
+              isScrolling = true;
+            }
+          },
+          { passive: true },
+        );
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            const targetCard = cards[index];
+            if (!targetCard) return;
+
+            slider.style.scrollBehavior = "smooth";
+            slider.style.scrollSnapType = "x mandatory";
+
+            const targetScroll =
+              targetCard.offsetLeft -
+              slider.offsetLeft -
+              (slider.clientWidth - targetCard.clientWidth) / 2;
+
+            slider.scrollTo({
+              left: targetScroll,
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
