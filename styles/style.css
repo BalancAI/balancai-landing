@@ -1419,7 +1419,7 @@ ul {
   .pricing__slider {
     justify-content: center;
     overflow-x: visible;
-    gap: 112px;
+    gap: clamp(24px, 2.5vw, 40px);
     margin-inline: 0;
     padding: 0;
   }
