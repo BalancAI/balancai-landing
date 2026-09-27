@@ -598,6 +598,40 @@
             <h3 class="feedback-form__title">LEAVE A FEEDBACK</h3>
 
             <div class="form-group">
+              <label for="feedback-name" class="visually-hidden"
+                >Full name</label
+              >
+              <input
+                type="text"
+                id="feedback-name"
+                name="name"
+                class="form-input"
+                placeholder="Full name"
+                required
+                autocomplete="name"
+                minlength="2"
+                maxlength="60"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-phone" class="visually-hidden"
+                >Phone number</label
+              >
+              <input
+                type="tel"
+                id="feedback-phone"
+                name="phone"
+                class="form-input"
+                placeholder="Phone number (+380...)"
+                required
+                autocomplete="tel"
+                pattern="^[\+]?[0-9\s\-\(\)]{10,20}$"
+                title="Введіть коректний номер телефону (від 10 цифр, наприклад: +380XXXXXXXXX)"
+              />
+            </div>
+
+            <div class="form-group">
               <label for="feedback-email" class="visually-hidden"
                 >Email address</label
               >
