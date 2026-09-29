@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <input type="checkbox" id="menu-toggle" class="visually-hidden" />
-
     <header class="header">
       <div class="container header__inner">
         <a href="#" class="logo" aria-label="Головна BalancAI">
@@ -57,11 +55,16 @@
 
         <a href="#pricing" class="btn btn--primary header__btn">Visit site</a>
 
-        <label for="menu-toggle" class="burger" aria-label="Відкрити меню">
+        <a
+          href="#mobile-menu"
+          class="burger"
+          aria-label="Відкрити меню"
+          aria-controls="mobile-menu"
+        >
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
-        </label>
+        </a>
       </div>
     </header>
 
@@ -495,8 +498,13 @@
             class="testimonials__slider"
             role="region"
             aria-label="Відгуки клієнтів"
+            tabindex="0"
           >
-            <div class="testimonial-card">
+            <div
+              class="testimonial-card"
+              role="group"
+              aria-label="Відгук 1 з 3"
+            >
               <blockquote class="testimonial-card__quote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 commodo dolor fermentum dignissim et pellentesque egestas
@@ -520,7 +528,11 @@
               </div>
             </div>
 
-            <div class="testimonial-card">
+            <div
+              class="testimonial-card"
+              role="group"
+              aria-label="Відгук 2 з 3"
+            >
               <blockquote class="testimonial-card__quote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 commodo dolor fermentum dignissim et pellentesque egestas
@@ -544,7 +556,11 @@
               </div>
             </div>
 
-            <div class="testimonial-card">
+            <div
+              class="testimonial-card"
+              role="group"
+              aria-label="Відгук 3 з 3"
+            >
               <blockquote class="testimonial-card__quote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 commodo dolor fermentum dignissim et pellentesque egestas
@@ -567,24 +583,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="testimonials__pagination" aria-label="Пагінація слайдера">
-            <button
-              type="button"
-              class="dot dot--active"
-              aria-label="Перейти до відгуку 1"
-            ></button>
-            <button
-              type="button"
-              class="dot"
-              aria-label="Перейти до відгуку 2"
-            ></button>
-            <button
-              type="button"
-              class="dot"
-              aria-label="Перейти до відгуку 3"
-            ></button>
           </div>
         </div>
       </section>
@@ -750,7 +748,7 @@
       </div>
     </footer>
 
-    <div class="mobile-menu" id="mobile-menu-overlay">
+    <div class="mobile-menu" id="mobile-menu">
       <div class="container mobile-menu__inner">
         <div class="mobile-menu__header">
           <div class="logo">
@@ -765,10 +763,10 @@
             <span class="logo__text logo__text--visible">BalancAI</span>
           </div>
 
-          <label
-            for="menu-toggle"
+          <a
+            href="#menu-closed"
             class="mobile-menu__close"
-            aria-label="Close menu"
+            aria-label="Закрити меню"
           >
             <svg
               width="28"
@@ -783,7 +781,7 @@
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-          </label>
+          </a>
         </div>
 
         <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
@@ -802,144 +800,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileLinks = document.querySelectorAll(
-          ".mobile-menu__link, .mobile-menu__footer .btn",
-        );
-
-        if (menuToggle && mobileLinks.length > 0) {
-          mobileLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-              menuToggle.checked = false;
-            });
-          });
-        }
-
-        const slider = document.querySelector(".testimonials__slider");
-        if (!slider) {
-          console.warn("Слайдер .testimonials__slider не знайдено в DOM.");
-          return;
-        }
-
-        const cards = Array.from(slider.querySelectorAll(".testimonial-card"));
-        const dots = Array.from(
-          document.querySelectorAll(".testimonials__pagination .dot"),
-        );
-
-        let isDown = false;
-        let startX = 0;
-        let scrollLeft = 0;
-        let hasMoved = false;
-
-        slider.addEventListener("dragstart", (e) => e.preventDefault());
-
-        slider.addEventListener("mousedown", (e) => {
-          if (e.button !== 0) return;
-
-          isDown = true;
-          hasMoved = false;
-          slider.classList.add("is-dragging");
-          slider.style.scrollSnapType = "none";
-          slider.style.scrollBehavior = "auto";
-
-          startX = e.pageX - slider.offsetLeft;
-          scrollLeft = slider.scrollLeft;
-        });
-
-        const endDrag = () => {
-          if (!isDown) return;
-          isDown = false;
-          slider.classList.remove("is-dragging");
-          slider.style.scrollSnapType = "x mandatory";
-          slider.style.scrollBehavior = "smooth";
-        };
-
-        window.addEventListener("mouseup", endDrag);
-
-        slider.addEventListener("mousemove", (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-
-          const currentX = e.pageX - slider.offsetLeft;
-          const distance = (currentX - startX) * 1.5;
-
-          if (Math.abs(distance) > 5) {
-            hasMoved = true;
-          }
-
-          slider.scrollLeft = scrollLeft - distance;
-        });
-
-        slider.addEventListener(
-          "click",
-          (e) => {
-            if (hasMoved) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-          },
-          true,
-        );
-
-        let isScrolling = false;
-
-        const updateActiveDot = () => {
-          const sliderCenter = slider.scrollLeft + slider.clientWidth / 2;
-          let closestIndex = 0;
-          let minDiff = Infinity;
-
-          cards.forEach((card, index) => {
-            const cardCenter =
-              card.offsetLeft + card.clientWidth / 2 - slider.offsetLeft;
-            const diff = Math.abs(sliderCenter - cardCenter);
-
-            if (diff < minDiff) {
-              minDiff = diff;
-              closestIndex = index;
-            }
-          });
-
-          dots.forEach((dot, idx) => {
-            dot.classList.toggle("dot--active", idx === closestIndex);
-          });
-
-          isScrolling = false;
-        };
-
-        slider.addEventListener(
-          "scroll",
-          () => {
-            if (!isScrolling) {
-              window.requestAnimationFrame(updateActiveDot);
-              isScrolling = true;
-            }
-          },
-          { passive: true },
-        );
-
-        dots.forEach((dot, index) => {
-          dot.addEventListener("click", () => {
-            const targetCard = cards[index];
-            if (!targetCard) return;
-
-            slider.style.scrollBehavior = "smooth";
-            slider.style.scrollSnapType = "x mandatory";
-
-            const targetScroll =
-              targetCard.offsetLeft -
-              slider.offsetLeft -
-              (slider.clientWidth - targetCard.clientWidth) / 2;
-
-            slider.scrollTo({
-              left: targetScroll,
-              behavior: "smooth",
-            });
-          });
-        });
-      });
-    </script>
   </body>
 </html>
